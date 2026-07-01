@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>재외한국학교형 맞춤형 발음 교육 자료 공유실</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', 'Nanum Gothic', sans-serif; }
@@ -20,7 +20,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center space-x-3">
                     <div class="bg-indigo-600 text-white p-2 rounded-xl flex items-center justify-center shadow-md">
-                        <i class="fa-solid fa-folder-open text-lg"></i>
+                        📂
                     </div>
                     <div>
                         <span class="font-extrabold text-base md:text-lg text-slate-900 tracking-tight">호치민시한국국제학교 (KISHCM)</span>
@@ -38,14 +38,14 @@
     </nav>
 
     <!-- 메인 타이틀 및 소개 배너 -->
-    <header class="bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white py-14 px-4 relative overflow-hidden">
+    <header class="bg-gradient-to-r from-slate-700 via-slate-600 to-indigo-800 text-white py-14 px-4 relative overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(99,102,241,0.15),transparent)] pointer-events-none"></div>
         <div class="max-w-4xl mx-auto text-center space-y-4 relative z-10">
             <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-yellow-400/20 text-yellow-300 border border-yellow-400/30">
-                <i class="fa-solid fa-graduation-cap mr-1.5"></i> 2026년 재외한국학교 교수·학습자료 개발 공모 선정작
+                🎓 2026년 재외한국학교 교수·학습자료 개발 공모 선정작
             </span>
             <h1 class="text-2xl md:text-4xl font-black tracking-tight leading-snug">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-400">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-400" style="line-height: 1.8;">
                     베트남어 간섭 극복 다감각, 디지털 기반<br class="hidden sm:block" /> 맞춤형 발음 교육 자료
                 </span>
             </h1>
@@ -64,16 +64,49 @@
 
         <!-- 화면 1: 6차시 요약 및 선택 화면 -->
         <div id="home-view" class="transition-view space-y-8">
+
+            <!-- 프로그램 안내 카드 -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-4">
+                <h3 class="text-sm font-bold text-slate-700 flex items-center gap-2">
+                    ℹ️
+                    프로그램 안내
+                </h3>
+                <div class="space-y-3">
+                    <div class="flex items-start gap-3 text-xs text-slate-600 leading-relaxed">
+                        <span class="mt-0.5 shrink-0 bg-indigo-100 text-indigo-700 font-bold px-2 py-0.5 rounded-md whitespace-nowrap">학습 대상</span>
+                        <p>초등 저학년 및 한글 학습 초기 단계 학생, 한국어 기초학력 및 유창성 향상이 필요한 학생</p>
+                    </div>
+                    <div class="flex items-start gap-3 text-xs text-slate-600 leading-relaxed">
+                        <span class="mt-0.5 shrink-0 bg-indigo-100 text-indigo-700 font-bold px-2 py-0.5 rounded-md whitespace-nowrap">구성 특징</span>
+                        <p>전체 프로그램은 6차시 핵심 모듈로 구성되며, 각 차시는 동일한 수업 구조를 적용하여 10차시 이상으로 확장 가능한 유연한 구조를 가짐</p>
+                    </div>
+                    <div class="flex items-start gap-3 text-xs text-slate-600 leading-relaxed">
+                        <span class="mt-0.5 shrink-0 bg-indigo-100 text-indigo-700 font-bold px-2 py-0.5 rounded-md whitespace-nowrap">수업 운영</span>
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                            <span class="bg-slate-100 text-slate-700 font-semibold px-2.5 py-1 rounded-lg">도입</span>
+                            →
+                            <span class="bg-slate-100 text-slate-700 font-semibold px-2.5 py-1 rounded-lg">제시·설명</span>
+                            →
+                            <span class="bg-slate-100 text-slate-700 font-semibold px-2.5 py-1 rounded-lg">연습</span>
+                            →
+                            <span class="bg-slate-100 text-slate-700 font-semibold px-2.5 py-1 rounded-lg">사용</span>
+                            →
+                            <span class="bg-slate-100 text-slate-700 font-semibold px-2.5 py-1 rounded-lg">마무리</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="border-b border-slate-200 pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div>
                     <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                        <i class="fa-solid fa-cubes text-indigo-500"></i>
+                        📚
                         6차시 교육과정 및 자료 선택
                     </h2>
                     <p class="text-slate-500 text-xs mt-1">각 차시 카드를 선택하시면 지도안, PPT, 활동지, 영상, 낱말카드 개별 다운로드 페이지로 이동합니다.</p>
                 </div>
                 <button onclick="downloadAllZip()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-1.5 shrink-0">
-                    <i class="fa-solid fa-file-zipper"></i>
+                    📦
                     <span>전차시 패키지 일괄 다운로드 (.zip)</span>
                 </button>
             </div>
@@ -84,7 +117,7 @@
         <div id="detail-view" class="transition-view hidden space-y-8">
             <div>
                 <button onclick="goBackToHome()" class="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors bg-white px-3 py-2 rounded-lg border border-slate-200 shadow-sm">
-                    <i class="fa-solid fa-arrow-left"></i>
+                    ←
                     <span>전체 차시 목록으로 돌아가기</span>
                 </button>
             </div>
@@ -92,7 +125,7 @@
             <div class="space-y-4">
                 <div class="flex items-center justify-between">
                     <h3 class="text-base font-bold text-slate-900 flex items-center gap-1.5">
-                        <i class="fa-solid fa-cloud-arrow-down text-emerald-500"></i>
+                        ⬇️
                         탑재 교수·학습 자료 다운로드 센터
                     </h3>
                     <span class="text-xs text-slate-400">원하시는 자료 포맷 옆의 버튼을 눌러주세요.</span>
@@ -102,15 +135,15 @@
         </div>
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-10 text-center text-xs space-y-2 border-t border-slate-800 px-4 mt-auto">
+    <footer class="bg-slate-900 text-slate-400 py-10 text-center text-sm space-y-2 border-t border-slate-800 px-4 mt-auto">
         <p>© 2026 호치민시한국국제학교 교사 오혜령, 강아라, 권예림, 박은솔, 양유정, 이서정</p>
-        <p class="text-slate-500 text-[10px]">본 자료는 교육부 재외교육지원센터 공모사업 지침을 준수하여 정당하게 제작 및 배포되었습니다.</p>
+        <p class="text-slate-500 text-xs">본 자료에 대한 무단 배포 및 복제를 금지하며 무단으로 사용할 시에는 관계 법령에 의거하여 처벌받을 수 있습니다.</p>
     </footer>
 
     <!-- 토스트 알림 -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs px-5 py-4 rounded-xl shadow-2xl flex items-center space-x-3 border border-slate-700 translate-y-20 opacity-0 transition-all duration-300 pointer-events-none max-w-sm">
         <div id="toast-spinner" class="hidden w-4 h-4 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin"></div>
-        <i class="fa-solid fa-circle-check text-emerald-400 text-base" id="toast-icon"></i>
+        <span id="toast-icon">✅</span>
         <div>
             <p id="toast-message" class="font-bold"></p>
             <p id="toast-sub-message" class="text-[10px] text-slate-400 mt-0.5"></p>
@@ -120,39 +153,39 @@
     <script>
         const lessonsData = [
             {
-                id: 1, number: "1차시", type: "기초", title: "소리 기차 만들기",
+                id: 1, number: "1차시", type: "기본 모음", title: "소리 기차 만들기",
                 desc: "한국어의 음절 구조(초성, 중성, 종성) 개념을 직관적으로 시각화하고 단모음 발음 시 정확한 입모양 잡기를 훈련합니다.",
                 errorFocus: "베트남어의 단절적 음절 습관 및 혓바닥 위치 이탈 보정",
                 files: [
-                    { name: "1차시_소리기차만들기_교사용지도안.pdf", type: "지도안", format: "PDF", size: "1.4 MB", url: "#" },
-                    { name: "1차시_기본음절구조_수업용강의PPT.pptx", type: "PPT", format: "PPTX", size: "12.4 MB", url: "#" },
-                    { name: "1차시_단모음매칭_학생용활동지.pdf", type: "활동지", format: "PDF", size: "2.1 MB", url: "#" },
-                    { name: "1차시_기본조음원리_교육시범영상.mp4", type: "영상", format: "MP4", size: "85.2 MB", url: "#" },
-                    { name: "1차시_최소대립단어_낱말카드세트.pdf", type: "카드", format: "PDF", size: "3.5 MB", url: "#" }
+                    { name: "1차시 (소리 기차 만들기)_지도안.pdf", type: "지도안", format: "PDF", size: "1.4 MB", url: "#" },
+                    { name: "1차시 (소리 기차 만들기)_수업용 PPT.pptx", type: "PPT", format: "PPTX", size: "12.4 MB", url: "#" },
+                    { name: "1차시 (소리 기차 만들기)_학생용 활동지.pdf", type: "활동지", format: "PDF", size: "2.1 MB", url: "#" },
+                    { name: "1차시 (소리 기차 만들기)_활동 참고 영상.mp4", type: "영상", format: "MP4", size: "85.2 MB", url: "#" },
+                    { name: "1차시 (소리 기차 만들기)_낱말 카드 세트.pdf", type: "카드", format: "PDF", size: "3.5 MB", url: "#" }
                 ]
             },
             {
-                id: 2, number: "2차시", type: "폐쇄음", title: "바람 훅! 손바닥 놀이",
+                id: 2, number: "2차시", type: "폐쇄음", title: "바람이 훅! 손바닥 놀이",
                 desc: "손바닥에 닿는 기식(공기 세기)과 휴지의 흔들림을 직접 느끼며 평음-경음-격음(ㄱ-ㄲ-ㅋ, ㅂ-ㅃ-ㅍ, ㄷ-ㄸ-ㅌ)의 차이를 감각적으로 체득합니다.",
                 errorFocus: "베트남어에 없는 유기음(바람소리) 대립 및 성대 인장력 감각 인지",
                 files: [
-                    { name: "2차시_기식세기와손바닥놀이_교사용지도안.pdf", type: "지도안", format: "PDF", size: "1.6 MB", url: "#" },
-                    { name: "2차시_평음경음격음구분_수업용강의PPT.pptx", type: "PPT", format: "PPTX", size: "14.8 MB", url: "#" },
-                    { name: "2차시_바람비교실험_학생용활동지.pdf", type: "활동지", format: "PDF", size: "3.2 MB", url: "#" },
-                    { name: "2차시_손바닥바람훈련_교육시범영상.mp4", type: "영상", format: "MP4", size: "78.4 MB", url: "#" },
-                    { name: "2차시_삼지적대립_낱말카드세트.pdf", type: "카드", format: "PDF", size: "4.1 MB", url: "#" }
+                    { name: "2차시 (바람이 훅! 손바닥 놀이)_지도안.pdf", type: "지도안", format: "PDF", size: "1.6 MB", url: "#" },
+                    { name: "2차시 (바람이 훅! 손바닥 놀이)_수업용 PPT.pptx", type: "PPT", format: "PPTX", size: "14.8 MB", url: "#" },
+                    { name: "2차시 (바람이 훅! 손바닥 놀이)_학생용 활동지.pdf", type: "활동지", format: "PDF", size: "3.2 MB", url: "#" },
+                    { name: "2차시 (바람이 훅! 손바닥 놀이)_활동 참고 영상.mp4", type: "영상", format: "MP4", size: "78.4 MB", url: "#" },
+                    { name: "2차시 (바람이 훅! 손바닥 놀이)_낱말 카드 세트.pdf", type: "카드", format: "PDF", size: "4.1 MB", url: "#" }
                 ]
             },
             {
-                id: 3, number: "3차시", type: "파찰음", title: "혓바닥 미끄럼틀",
+                id: 3, number: "3차시", type: "파찰음", title: "툭! 열리는 소리문",
                 desc: "베트남인 학습자가 가장 혼동하기 쉬운 치조구개음(/ㅈ, ㅉ, ㅊ/)과 마찰음(/ㅅ, ㅆ/)의 정확한 조음 단면 및 기압 구강 구조를 지칭합니다.",
                 errorFocus: "/ㅈ/와 /ㅊ/의 높은 오지각률(70%) 극복을 위한 발화 구조 훈련",
                 files: [
-                    { name: "3차시_파찰음조음위치교정_교사용지도안.pdf", type: "지도안", format: "PDF", size: "1.5 MB", url: "#" },
-                    { name: "3차시_ㅈ_ㅉ_ㅊ_정밀입모양_수업용강의PPT.pptx", type: "PPT", format: "PPTX", size: "16.1 MB", url: "#" },
-                    { name: "3차시_조음위치자가진단_학생용활동지.pdf", type: "활동지", format: "PDF", size: "2.4 MB", url: "#" },
-                    { name: "3차시_경구개마찰파찰비교_교육시범영상.mp4", type: "영상", format: "MP4", size: "90.1 MB", url: "#" },
-                    { name: "3차시_파찰마찰단어_낱말카드세트.pdf", type: "카드", format: "PDF", size: "3.9 MB", url: "#" }
+                    { name: "3차시 (툭! 열리는 소리문)_지도안.pdf", type: "지도안", format: "PDF", size: "1.5 MB", url: "#" },
+                    { name: "3차시 (툭! 열리는 소리문)_수업용 PPT.pptx", type: "PPT", format: "PPTX", size: "16.1 MB", url: "#" },
+                    { name: "3차시 (툭! 열리는 소리문)_학생용 활동지.pdf", type: "활동지", format: "PDF", size: "2.4 MB", url: "#" },
+                    { name: "3차시 (툭! 열리는 소리문)_활동 참고 영상.mp4", type: "영상", format: "MP4", size: "90.1 MB", url: "#" },
+                    { name: "3차시 (툭! 열리는 소리문)_낱말 카드 세트.pdf", type: "카드", format: "PDF", size: "3.9 MB", url: "#" }
                 ]
             },
             {
@@ -160,35 +193,34 @@
                 desc: "베트남어 종성에 설측음 'ㄹ'이 없어 이를 비음 'ㄴ' 혹은 'ㅇ'으로 발음하는 습관(물→문, 달→단)을 정확한 설첨-치조 접촉으로 교정합니다.",
                 errorFocus: "ㄹ 받침 탈락 및 종성 대치 화석화 예방을 위한 가벼운 탄설음 원리 체득",
                 files: [
-                    { name: "4차시_ㄹ받침정복교정안_교사용지도안.pdf", type: "지도안", format: "PDF", size: "1.3 MB", url: "#" },
-                    { name: "4차시_설측유음ㄹ원리_수업용강의PPT.pptx", type: "PPT", format: "PPTX", size: "11.9 MB", url: "#" },
-                    { name: "4차시_ㄹ받침도르르굴리기_학생용활동지.pdf", type: "활동지", format: "PDF", size: "2.8 MB", url: "#" },
-                    { name: "4차시_ㄹ받침선생님시범_교육시범영상.mp4", type: "영상", format: "MP4", size: "92.0 MB", url: "#" },
-                    { name: "4차시_종성최소대립_낱말카드세트.pdf", type: "카드", format: "PDF", size: "3.6 MB", url: "#" }
+                    { name: "4차시 (도르르 굴러가는 ㄹ 받침)_지도안.pdf", type: "지도안", format: "PDF", size: "1.3 MB", url: "#" },
+                    { name: "4차시 (도르르 굴러가는 ㄹ 받침)_수업용 PPT.pptx", type: "PPT", format: "PPTX", size: "11.9 MB", url: "#" },
+                    { name: "4차시 (도르르 굴러가는 ㄹ 받침)_학생용 활동지.pdf", type: "활동지", format: "PDF", size: "2.8 MB", url: "#" },
+                    { name: "4차시 (도르르 굴러가는 ㄹ 받침)_활동 참고 영상.mp4", type: "영상", format: "MP4", size: "92.0 MB", url: "#" },
+                    { name: "4차시 (도르르 굴러가는 ㄹ 받침)_낱말 카드 세트.pdf", type: "카드", format: "PDF", size: "3.6 MB", url: "#" }
                 ]
             },
             {
-                id: 5, number: "5차시", type: "연음/비음화", title: "글자들의 손잡기",
+                id: 5, number: "5차시", type: "연음", title: "소리가 이어져요!",
                 desc: "단어들을 뚝뚝 끊어 말하는 한계에서 벗어나, 뒤 모음 발생 시 받침이 이어서 이어지는 연음 및 비음 동화의 자연스러운 음 변화를 가르칩니다.",
                 errorFocus: "문장 단위의 발화 유창성 부족 해결 및 복합 연음 원리 내재화",
                 files: [
-                    { name: "5차시_매끄러운음운연결_교사용지도안.pdf", type: "지도안", format: "PDF", size: "1.5 MB", url: "#" },
-                    { name: "5차시_연음비음동화원리_수업용강의PPT.pptx", type: "PPT", format: "PPTX", size: "18.3 MB", url: "#" },
-                    { name: "5차시_소리손잡기규칙_학생용활동지.pdf", type: "활동지", format: "PDF", size: "3.0 MB", url: "#" },
-                    { name: "5차시_연음비음실제발음_교육시범영상.mp4", type: "영상", format: "MP4", size: "88.7 MB", url: "#" },
-                    { name: "5차시_연음비음변화_낱말카드세트.pdf", type: "카드", format: "PDF", size: "4.5 MB", url: "#" }
+                    { name: "5차시 (소리가 이어져요!)_지도안.pdf", type: "지도안", format: "PDF", size: "1.5 MB", url: "#" },
+                    { name: "5차시 (소리가 이어져요!)_수업용 PPT.pptx", type: "PPT", format: "PPTX", size: "18.3 MB", url: "#" },
+                    { name: "5차시 (소리가 이어져요!)_학생용 활동지.pdf", type: "활동지", format: "PDF", size: "3.0 MB", url: "#" },
+                    { name: "5차시 (소리가 이어져요!)_활동 참고 영상.mp4", type: "영상", format: "MP4", size: "88.7 MB", url: "#" },
                 ]
             },
             {
-                id: 6, number: "6차시", type: "심화", title: "겹받침, 누가 남을까?",
+                id: 6, number: "6차시", type: "겹받침", title: "겹받침, 누가 남을까?",
                 desc: "다문화 학생들이 가장 어렵게 느끼는 자음군 단순화(겹받침 탈락)와 그 뒤에 따라오는 복사 음운 변동(예: 닭도→[닥또])의 규칙을 완전 해체합니다.",
                 errorFocus: "이중 자음 겹받침의 표기와 실제 발음의 일치화 훈련",
                 files: [
-                    { name: "6차시_최고난도겹받침마스터_교사용지도안.pdf", type: "지도안", format: "PDF", size: "1.7 MB", url: "#" },
-                    { name: "6차시_이중자음군단순화_수업용강의PPT.pptx", type: "PPT", format: "PPTX", size: "20.2 MB", url: "#" },
-                    { name: "6차시_겹받침탈락조사_학생용활동지.pdf", type: "활동지", format: "PDF", size: "3.5 MB", url: "#" },
-                    { name: "6차시_겹받침연쇄반응_교육시범영상.mp4", type: "영상", format: "MP4", size: "102.4 MB", url: "#" },
-                    { name: "6차시_겹받침탈락단어_낱말카드세트.pdf", type: "카드", format: "PDF", size: "5.0 MB", url: "#" }
+                    { name: "6차시 (겹받침, 누가 남을까?)_지도안.pdf", type: "지도안", format: "PDF", size: "1.7 MB", url: "#" },
+                    { name: "6차시 (겹받침, 누가 남을까?)_수업용 PPT.pptx", type: "PPT", format: "PPTX", size: "20.2 MB", url: "#" },
+                    { name: "6차시 (겹받침, 누가 남을까?)_학생용 활동지.pdf", type: "활동지", format: "PDF", size: "3.5 MB", url: "#" },
+                    { name: "6차시 (겹받침, 누가 남을까?)_활동 참고 영상.mp4", type: "영상", format: "MP4", size: "102.4 MB", url: "#" },
+                    { name: "6차시 (겹받침, 누가 남을까?)_낱말 카드 세트.pdf", type: "카드", format: "PDF", size: "5.0 MB", url: "#" }
                 ]
             }
         ];
@@ -204,8 +236,8 @@
                 if (l.type === "폐쇄음") { badgeStyle = "bg-amber-100 text-amber-800"; hoverBorder = "hover:border-amber-500 hover:ring-2 hover:ring-amber-100"; }
                 else if (l.type === "파찰음") { badgeStyle = "bg-emerald-100 text-emerald-800"; hoverBorder = "hover:border-emerald-500 hover:ring-2 hover:ring-emerald-100"; }
                 else if (l.type === "유음") { badgeStyle = "bg-blue-100 text-blue-800"; hoverBorder = "hover:border-blue-500 hover:ring-2 hover:ring-blue-100"; }
-                else if (l.type === "연음/비음화") { badgeStyle = "bg-purple-100 text-purple-800"; hoverBorder = "hover:border-purple-500 hover:ring-2 hover:ring-purple-100"; }
-                else if (l.type === "심화") { badgeStyle = "bg-rose-100 text-rose-800"; hoverBorder = "hover:border-rose-500 hover:ring-2 hover:ring-rose-100"; }
+                else if (l.type === "연음") { badgeStyle = "bg-purple-100 text-purple-800"; hoverBorder = "hover:border-purple-500 hover:ring-2 hover:ring-purple-100"; }
+                else if (l.type === "겹받침") { badgeStyle = "bg-rose-100 text-rose-800"; hoverBorder = "hover:border-rose-500 hover:ring-2 hover:ring-rose-100"; }
 
                 container.innerHTML += `
                     <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm transition-all duration-300 transform hover:-translate-y-1.5 ${hoverBorder} flex flex-col gap-4">
@@ -219,12 +251,12 @@
                         </div>
                         <div class="pt-4 border-t border-slate-100 space-y-3 mt-auto">
                             <div class="text-[10px] text-slate-400 flex items-start gap-1">
-                                <i class="fa-solid fa-triangle-exclamation text-amber-500 mt-0.5 shrink-0"></i>
+                                <span class="text-amber-500 shrink-0">⚠️</span>
                                 <span><strong>교정 초점:</strong> ${l.errorFocus}</span>
                             </div>
                             <button onclick="viewLessonDetail(${l.id})" class="w-full py-2.5 px-4 bg-slate-100 hover:bg-indigo-600 hover:text-white text-slate-700 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1">
                                 <span>이 차시 자료 다운받기</span>
-                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                <span>›</span>
                             </button>
                         </div>
                     </div>`;
@@ -239,8 +271,8 @@
             if (lesson.type === "폐쇄음") badgeStyle = "bg-amber-100 text-amber-800";
             else if (lesson.type === "파찰음") badgeStyle = "bg-emerald-100 text-emerald-800";
             else if (lesson.type === "유음") badgeStyle = "bg-blue-100 text-blue-800";
-            else if (lesson.type === "연음/비음화") badgeStyle = "bg-purple-100 text-purple-800";
-            else if (lesson.type === "심화") badgeStyle = "bg-rose-100 text-rose-800";
+            else if (lesson.type === "연음") badgeStyle = "bg-purple-100 text-purple-800";
+            else if (lesson.type === "겹받침") badgeStyle = "bg-rose-100 text-rose-800";
 
             document.getElementById('detail-header-card').innerHTML = `
                 <div class="flex flex-wrap items-center justify-between gap-3">
@@ -249,32 +281,32 @@
                         <span class="px-2.5 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider ${badgeStyle}">${lesson.type}</span>
                     </div>
                     <button onclick="downloadLessonZip(${lesson.id})" class="text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white px-3 py-1.5 rounded-lg flex items-center gap-1 shadow-sm transition-all">
-                        <i class="fa-solid fa-file-zipper text-yellow-300"></i>
+                        <span>📦</span>
                         <span>이 차시 자료 전체 압축 다운로드</span>
                     </button>
                 </div>
                 <h2 class="text-xl md:text-2xl font-black text-slate-900">${lesson.title}</h2>
                 <p class="text-xs md:text-sm text-slate-600 leading-relaxed">${lesson.desc}</p>
                 <div class="pt-3 border-t border-slate-100 flex items-center gap-2 text-xs text-amber-700 bg-amber-50/50 p-2.5 rounded-lg border border-amber-100">
-                    <i class="fa-solid fa-circle-exclamation shrink-0 text-sm"></i>
+                    <span class="shrink-0">⚠️</span>
                     <span><strong>발화 극복 핵심 포인트:</strong> ${lesson.errorFocus}</span>
                 </div>`;
 
             const dlContainer = document.getElementById('download-list');
             dlContainer.innerHTML = '';
             lesson.files.forEach(f => {
-                let fileIcon = "fa-file-pdf text-red-500";
+                let fileIcon = "📄";
                 let typeBadge = "bg-slate-100 text-slate-600";
-                if (f.type === "PPT") { fileIcon = "fa-file-powerpoint text-orange-500"; typeBadge = "bg-orange-50 text-orange-700 border border-orange-100"; }
-                else if (f.type === "영상") { fileIcon = "fa-file-video text-rose-500"; typeBadge = "bg-rose-50 text-rose-700 border border-rose-100"; }
-                else if (f.type === "활동지") { fileIcon = "fa-file-signature text-emerald-500"; typeBadge = "bg-emerald-50 text-emerald-700 border border-emerald-100"; }
-                else if (f.type === "카드") { fileIcon = "fa-address-card text-purple-500"; typeBadge = "bg-purple-50 text-purple-700 border border-purple-100"; }
-                else if (f.type === "지도안") { fileIcon = "fa-file-invoice text-indigo-500"; typeBadge = "bg-indigo-50 text-indigo-700 border border-indigo-100"; }
+                if (f.type === "PPT") { fileIcon = "📊"; typeBadge = "bg-orange-50 text-orange-700 border border-orange-100"; }
+                else if (f.type === "영상") { fileIcon = "🎬"; typeBadge = "bg-rose-50 text-rose-700 border border-rose-100"; }
+                else if (f.type === "활동지") { fileIcon = "📝"; typeBadge = "bg-emerald-50 text-emerald-700 border border-emerald-100"; }
+                else if (f.type === "카드") { fileIcon = "🃏"; typeBadge = "bg-purple-50 text-purple-700 border border-purple-100"; }
+                else if (f.type === "지도안") { fileIcon = "📋"; typeBadge = "bg-indigo-50 text-indigo-700 border border-indigo-100"; }
 
                 dlContainer.innerHTML += `
                     <div class="bg-white p-4 rounded-xl border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                         <div class="flex items-start gap-3 min-w-0">
-                            <i class="fa-solid ${fileIcon} text-2xl mt-0.5 shrink-0"></i>
+                            <span class="text-2xl mt-0.5 shrink-0">${fileIcon}</span>
                             <div class="space-y-0.5 min-w-0">
                                 <p class="font-bold text-slate-900 text-xs md:text-sm truncate pr-2">${f.name}</p>
                                 <div class="flex items-center gap-2">
@@ -284,7 +316,7 @@
                             </div>
                         </div>
                         <a href="${f.url}" target="_blank" onclick="triggerDownload('${f.name}', event)" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 shrink-0">
-                            <i class="fa-solid fa-arrow-down"></i>
+                            <span>⬇</span>
                             <span>다운로드</span>
                         </a>
                     </div>`;
@@ -336,9 +368,9 @@
                 icon.classList.add('hidden'); spinner.classList.remove('hidden');
             } else {
                 spinner.classList.add('hidden'); icon.classList.remove('hidden');
-                if (type === "success") icon.className = "fa-solid fa-circle-check text-emerald-400 text-base";
-                else if (type === "error") icon.className = "fa-solid fa-circle-xmark text-red-400 text-base";
-                else icon.className = "fa-solid fa-circle-info text-sky-400 text-base";
+                if (type === "success") icon.textContent = "✅";
+                else if (type === "error") icon.textContent = "❌";
+                else icon.textContent = "ℹ️";
             }
 
             toast.classList.remove('translate-y-20', 'opacity-0');
