@@ -23,7 +23,7 @@
                         📂
                     </div>
                     <div>
-                        <span class="font-extrabold text-base md:text-lg text-slate-900 tracking-tight">호치민시한국국제학교 (KISHCM)</span>
+                        <span class="font-extrabold text-base md:text-lg text-slate-900 tracking-tight">호치민시한국국제학교 (KISHCMC)</span>
                         <p class="text-[10px] md:text-xs text-slate-500 font-semibold">베트남어 간섭 극복 다감각·디지털 기반 맞춤형 발음 교육 자료실</p>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
             </h1>
             <div class="space-y-1">
                 <p class="text-slate-300 text-xs md:text-sm whitespace-nowrap">
-                    본 자료는 호치민시한국국제학교(KISHCM) 교사진이 개발한 한국어-베트남어 음운 대조 분석 기반 발음 교육 자료입니다.
+                    본 자료는 호치민시한국국제학교(KISHCMC) 교사진이 개발한 한국어-베트남어 음운 대조 분석 기반 발음 교육 자료입니다.
                 </p>
                 <p class="text-slate-300 text-xs md:text-sm whitespace-nowrap">
                     모국어 간섭을 극복하고 정확한 발음을 인지하는 <strong>6차시 교육 패키지</strong>를 자유롭게 내려받아 보세요.
@@ -140,6 +140,19 @@
         <p class="text-slate-500 text-xs">본 자료에 대한 무단 배포 및 복제를 금지하며 무단으로 사용할 시에는 관계 법령에 의거하여 처벌받을 수 있습니다.</p>
     </footer>
 
+    <!-- 미리보기 모달 -->
+    <div id="preview-modal" class="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden">
+            <div class="flex items-center justify-between px-5 py-3 border-b border-slate-200">
+                <p id="preview-title" class="text-sm font-bold text-slate-800 truncate pr-4"></p>
+                <button onclick="closePreview()" class="text-slate-400 hover:text-slate-700 text-xl font-bold shrink-0">✕</button>
+            </div>
+            <div class="flex-1 overflow-hidden bg-slate-100">
+                <iframe id="preview-frame" src="" class="w-full h-full" style="min-height:70vh" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- 토스트 알림 -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs px-5 py-4 rounded-xl shadow-2xl flex items-center space-x-3 border border-slate-700 translate-y-20 opacity-0 transition-all duration-300 pointer-events-none max-w-sm">
         <div id="toast-spinner" class="hidden w-4 h-4 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin"></div>
@@ -153,14 +166,14 @@
     <script>
         const lessonsData = [
             {
-                id: 1, number: "1차시", type: "기본 모음", title: "소리 기차 만들기",
+                id: 1, number: "1차시", type: "기본 모음", title: "반가워, 모음 친구들!",
                 desc: "한국어의 음절 구조(초성, 중성, 종성) 개념을 직관적으로 시각화하고 단모음 발음 시 정확한 입모양 잡기를 훈련합니다.",
                 errorFocus: "베트남어의 단절적 음절 습관 및 혓바닥 위치 이탈 보정",
                 files: [
-                    { name: "1차시 PPT (소리 기차 만들기).pptx", type: "PPT", format: "PPTX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/1차시 PPT (소리 기차 만들기).pptx" },
-                    { name: "1차시 지도안 (소리 기차 만들기).hwp", type: "지도안", format: "HWP", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/1차시 지도안 (소리 기차 만들기).hwp" },
-                    { name: "1차시 활동지 (소리 기차 만들기).hwpx", type: "활동지", format: "HWPX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/1차시 활동지 (소리 기차 만들기).hwpx" },
-                    { name: "1차시 짝꿍날말카드 (소리 기차 만들기).pdf", type: "카드", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/1차시 짝꿍날말카드 (소리 기차 만들기).pdf" }
+                    { name: "1차시 PPT (반가워, 모음 친구들!).pptx", type: "PPT", format: "PPTX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/1차시 PPT (반가워, 모음 친구들!).pptx" },
+                    { name: "1차시 지도안 (반가워, 모음 친구들!).pdf", type: "지도안", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/1차시 지도안 (반가워, 모음 친구들!).pdf" },
+                    { name: "1차시 활동지 (반가워, 모음 친구들!).pdf", type: "활동지", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/1차시 활동지 (반가워, 모음 친구들!).pdf" },
+                    { name: "1차시 짝꿍날말카드 (반가워, 모음 친구들!).pdf", type: "카드", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/1차시 짝꿍날말카드 (반가워, 모음 친구들!).pdf" }
                 ]
             },
             {
@@ -169,8 +182,8 @@
                 errorFocus: "베트남어에 없는 유기음(바람소리) 대립 및 성대 인장력 감각 인지",
                 files: [
                     { name: "2차시 PPT (바람이 훅! 손바닥 놀이).pptx", type: "PPT", format: "PPTX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/2차시 PPT (바람이 훅! 손바닥 놀이).pptx" },
-                    { name: "2차시 지도안 (바람이 훅! 손바닥 놀이).hwp", type: "지도안", format: "HWP", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/2차시 지도안 (바람이 훅! 손바닥 놀이).hwp" },
-                    { name: "2차시 활동지 (바람이 훅! 손바닥 놀이).hwpx", type: "활동지", format: "HWPX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/2차시 활동지 (바람이 훅! 손바닥 놀이).hwpx" },
+                    { name: "2차시 지도안 (바람이 훅! 손바닥 놀이).pdf", type: "지도안", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/2차시 지도안 (바람이 훅! 손바닥 놀이).pdf" },
+                    { name: "2차시 활동지 (바람이 훅! 손바닥 놀이).pdf", type: "활동지", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/2차시 활동지 (바람이 훅! 손바닥 놀이).pdf" },
                     { name: "2차시 짝꿍날말카드 (바람이 훅! 손바닥 놀이).pdf", type: "카드", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/2차시 짝꿍날말카드 (바람이 훅! 손바닥 놀이).pdf" }
                 ]
             },
@@ -180,30 +193,30 @@
                 errorFocus: "/ㅈ/와 /ㅊ/의 높은 오지각률(70%) 극복을 위한 발화 구조 훈련",
                 files: [
                     { name: "3차시 PPT (툭! 열리는 소리문).pptx", type: "PPT", format: "PPTX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/3차시 PPT (툭! 열리는 소리문).pptx" },
-                    { name: "3차시 지도안 (툭! 열리는 소리문).hwp", type: "지도안", format: "HWP", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/3차시 지도안 (툭! 열리는 소리문).hwp" },
-                    { name: "3차시 활동지 (툭! 열리는 소리문).hwpx", type: "활동지", format: "HWPX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/3차시 활동지 (툭! 열리는 소리문).hwpx" },
+                    { name: "3차시 지도안 (툭! 열리는 소리문).pdf", type: "지도안", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/3차시 지도안 (툭! 열리는 소리문).pdf" },
+                    { name: "3차시 활동지 (툭! 열리는 소리문).pdf", type: "활동지", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/3차시 활동지 (툭! 열리는 소리문).pdf" },
                     { name: "3차시 짝꿍날말카드 (툭! 열리는 소리문).pdf", type: "카드", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/3차시 짝꿍날말카드 (툭! 열리는 소리문).pdf" }
                 ]
             },
             {
                 id: 4, number: "4차시", type: "유음", title: "도르르 굴러가는 'ㄹ' 받침",
-                desc: "베트남어 종성에 설측음 'ㄹ'이 없어 이를 비음 'ㄴ' 혹은 'ㅇ'으로 발음하는 습관(물→문, 달→단)을 정확한 설첨-치조 접촉으로 교정합니다.",
-                errorFocus: "ㄹ 받침 탈락 및 종성 대치 화석화 예방을 위한 가벼운 탄설음 원리 체득",
+                desc: "베트남어 종성에 설측음 'ㄹ'이 없어 이를 비음 'ㄴ'으로 발음하는 습관(물→문, 달→단)을 혀끝을 윗잇몸(치조)에 가볍고 빠르게 한 번 대었다가 떼면서 공기를 혀 양옆으로 흘려보내는 설측음([l])로 교정합니다.",
+                errorFocus: "ㄹ 받침 탈락 및 종성 대치 화석화 예방을 위한 탄설음(혀끝을 윗잇몸(치조)에 가볍고 빠르게 한 번 대었다가 떼면서 내는) 원리 체득",
                 files: [
                     { name: "4차시 PPT (도르르 굴러가는 ㄹ 받침).pptx", type: "PPT", format: "PPTX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/4차시 PPT (도르르 굴러가는 ㄹ 받침).pptx" },
-                    { name: "4차시 지도안 (도르르 굴러가는 ㄹ 받침).hwp", type: "지도안", format: "HWP", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/4차시 지도안 (도르르 굴러가는 ㄹ 받침).hwp" },
-                    { name: "4차시 활동지 (도르르 굴러가는 ㄹ 받침).hwpx", type: "활동지", format: "HWPX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/4차시 활동지 (도르르 굴러가는 ㄹ 받침).hwpx" },
+                    { name: "4차시 지도안 (도르르 굴러가는 ㄹ 받침).pdf", type: "지도안", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/4차시 지도안 (도르르 굴러가는 ㄹ 받침).pdf" },
+                    { name: "4차시 활동지 (도르르 굴러가는 ㄹ 받침).pdf", type: "활동지", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/4차시 활동지 (도르르 굴러가는 ㄹ 받침).pdf" },
                     { name: "4차시 짝꿍날말카드 (도르르 굴러가는 ㄹ 받침).pdf", type: "카드", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/4차시 짝꿍날말카드 (도르르 굴러가는 ㄹ 받침).pdf" }
                 ]
             },
             {
                 id: 5, number: "5차시", type: "연음", title: "소리가 이어져요!",
                 desc: "단어들을 뚝뚝 끊어 말하는 한계에서 벗어나, 뒤 모음 발생 시 받침이 이어서 이어지는 연음 및 비음 동화의 자연스러운 음 변화를 가르칩니다.",
-                errorFocus: "문장 단위의 발화 유창성 부족 해결 및 복합 연음 원리 내재화",
+                errorFocus: "단어를 뚝뚝 끊어 말하는 한계에서 벗어나, 받침 발음이 자연스럽게 이어지는 연음 현상을 가르칩니다.",
                 files: [
                     { name: "5차시 PPT (소리가 이어져요!).pptx", type: "PPT", format: "PPTX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/5차시 PPT (소리가 이어져요!).pptx" },
-                    { name: "5차시 지도안 (소리가 이어져요!).hwp", type: "지도안", format: "HWP", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/5차시 지도안 (소리가 이어져요!).hwp" },
-                    { name: "5차시 활동지 (소리가 이어져요!).hwpx", type: "활동지", format: "HWPX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/5차시 활동지 (소리가 이어져요!).hwpx" }
+                    { name: "5차시 지도안 (소리가 이어져요!).pdf", type: "지도안", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/5차시 지도안 (소리가 이어져요!).pdf" },
+                    { name: "5차시 활동지 (소리가 이어져요!).pdf", type: "활동지", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/5차시 활동지 (소리가 이어져요!).pdf" }
                 ]
             },
             {
@@ -212,8 +225,8 @@
                 errorFocus: "겹받침에서 어떤 받침이 남고 어떤 받침이 탈락하는지 인지",
                 files: [
                     { name: "6차시 PPT (겹받침, 누가 남을까?).pptx", type: "PPT", format: "PPTX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/6차시 PPT (겹받침, 누가 남을까?).pptx" },
-                    { name: "6차시 지도안 (겹받침, 누가 남을까?).hwp", type: "지도안", format: "HWP", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/6차시 지도안 (겹받침, 누가 남을까?).hwp" },
-                    { name: "6차시 활동지 (겹받침, 누가 남을까?).hwpx", type: "활동지", format: "HWPX", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/6차시 활동지 (겹받침, 누가 남을까?).hwpx" },
+                    { name: "6차시 지도안 (겹받침, 누가 남을까?).pdf", type: "지도안", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/6차시 지도안 (겹받침, 누가 남을까?).pdf" },
+                    { name: "6차시 활동지 (겹받침, 누가 남을까?).pdf", type: "활동지", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/6차시 활동지 (겹받침, 누가 남을까?).pdf" },
                     { name: "6차시 짝꿍날말카드 (겹받침, 누가 남을까?).pdf", type: "카드", format: "PDF", size: "", url: "https://sophia-greennaraemaker.github.io/kishcm-pronunciation/6차시 짝꿍날말카드 (겹받침, 누가 남을까?).pdf" }
                 ]
             }
@@ -309,10 +322,16 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="${f.url}" target="_blank" onclick="triggerDownload('${f.name}', event)" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-1.5 shrink-0">
-                            <span>⬇</span>
-                            <span>다운로드</span>
-                        </a>
+                        <div class="flex items-center gap-2 shrink-0">
+                            ${f.type !== '영상' && f.url !== '#' ? `<button onclick="openPreview('${f.url}', '${f.type}', '${f.name}')" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-1.5">
+                                <span>👁</span>
+                                <span>미리보기</span>
+                            </button>` : ''}
+                            <a href="${f.url}" target="_blank" onclick="triggerDownload('${f.name}', event)" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-1.5">
+                                <span>⬇</span>
+                                <span>다운로드</span>
+                            </a>
+                        </div>
                     </div>`;
             });
 
@@ -325,6 +344,32 @@
             document.getElementById('detail-view').classList.add('hidden');
             document.getElementById('home-view').classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openPreview(url, type, name) {
+            const modal = document.getElementById('preview-modal');
+            const frame = document.getElementById('preview-frame');
+            const title = document.getElementById('preview-title');
+            title.textContent = name;
+
+            let previewUrl = '';
+            if (type === 'PPT') {
+                previewUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(url)}&embedded=true`;
+            } else {
+                // PDF
+                previewUrl = url;
+            }
+
+            frame.src = previewUrl;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePreview() {
+            const modal = document.getElementById('preview-modal');
+            document.getElementById('preview-frame').src = '';
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
         }
 
         function triggerDownload(fileName, e) {
