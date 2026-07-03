@@ -302,8 +302,14 @@
             const dlContainer = document.getElementById('download-list');
             dlContainer.innerHTML = '';
             const baseUrl = "https://github.com/sophia-greennaraemaker/kishcm-pronunciation/raw/main/";
+            function encodeFilename(name) {
+                return encodeURIComponent(name)
+                    .replace(/%28/g, '(')
+                    .replace(/%29/g, ')')
+                    .replace(/%21/g, '!');
+            }
             lesson.files.forEach(f => {
-                const fileUrl = baseUrl + encodeURIComponent(f.name);
+                const fileUrl = baseUrl + encodeFilename(f.name);
                 let fileIcon = "📄";
                 let typeBadge = "bg-slate-100 text-slate-600";
                 if (f.type === "PPT") { fileIcon = "📊"; typeBadge = "bg-orange-50 text-orange-700 border border-orange-100"; }
